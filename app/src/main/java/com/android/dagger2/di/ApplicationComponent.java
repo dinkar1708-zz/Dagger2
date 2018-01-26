@@ -12,6 +12,9 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = ApplicationModule.class)
+/**
+ * intermediatier to access the module object
+ */
 public interface ApplicationComponent {
 
     public void inject(MyApplication dragger2Application);

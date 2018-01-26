@@ -9,8 +9,8 @@ import com.android.dagger2.di.DaggerApplicationComponent;
 
 /**
  * Created by DPM on 26-01-2018.
+ * application class, decadency graph is initialized, other components can also be initialized.
  */
-
 public class MyApplication extends Application {
 
     private ApplicationComponent applicationComponent;
