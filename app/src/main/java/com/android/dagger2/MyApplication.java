@@ -20,6 +20,8 @@ public class MyApplication extends Application {
         super.onCreate();
         applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this)).build();
+        // inject application class in component
+        applicationComponent.inject(this);
         Log.i("", "onCreate...app component initialized..." + applicationComponent);
     }
 
