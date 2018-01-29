@@ -1,4 +1,6 @@
 # Dagger2
+https://guides.codepath.com/android/dependency-injection-with-dagger-2#overview
+
 Android and dagger 2 basics.
 Dagger2 all in one place – very simple easy steps to understand the basics of dagger2.
 What dagger2
@@ -16,4 +18,10 @@ Why
 •	User needs to use the object without any headache how to create the object of components.
 •	# copied from developer’s android - 
 o	Dagger's static, compile-time implementation means that it can be used in Android apps without needless runtime cost or memory usage.
+
+This application contains two modules
+1. app - basic setup of dagger2
+2. dagger2Netmodule - shows how to setup basic network request API
+
+
 

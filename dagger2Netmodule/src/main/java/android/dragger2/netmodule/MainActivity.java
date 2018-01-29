@@ -1,13 +1,11 @@
 package android.dragger2.netmodule;
 
+import android.dragger2.netmodule.network.TestClient;
 import android.dragger2.netmodule.network.VolleyClient;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -22,10 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    private VolleyClient volleyClient;
+    //inject volley client from application component
+    @Inject
+    VolleyClient volleyClient;
 
     @Inject
-    NetworkApi networkApi;
+    MyApplication myApplication;
+
+    @Inject
+    TestClient testClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(TAG, "onCreate... ");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-
         MyApplication application = (MyApplication) getApplication();
-        volleyClient = application.getApplicationComponent().volleyClient();
+        //injecting this activity in dependency graph
+        application.getApplicationComponent().inject(this);
 
         String url = "http://www.example.com";
 
@@ -73,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         volleyClient.addToRequestQueue(stringRequest);
-        Log.i(TAG, "executed... ");
+
+        Log.i(TAG, "executed... myApplication "+myApplication +" testClient "+testClient);
 
     }
 

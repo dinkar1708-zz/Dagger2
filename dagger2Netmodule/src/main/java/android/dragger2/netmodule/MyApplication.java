@@ -4,6 +4,7 @@ import android.app.Application;
 import android.dragger2.netmodule.di.component.ApplicationComponent;
 import android.dragger2.netmodule.di.component.DaggerApplicationComponent;
 import android.dragger2.netmodule.di.module.ApplicationModule;
+import android.dragger2.netmodule.di.module.NetModule;
 import android.util.Log;
 
 /**
@@ -13,15 +14,16 @@ import android.util.Log;
 public class MyApplication extends Application {
 
     private ApplicationComponent applicationComponent;
-//    private NetComponent netComponent;
-
 
     @Override
     public void onCreate() {
         super.onCreate();
+        //Instantiating the component
+//        We should do all this work within a specialization of the Application class
+//        since these instances should be declared only once throughout the entire lifespan of the application:
         applicationComponent = DaggerApplicationComponent.builder()
+                .netModule(new NetModule(this))
                 .applicationModule(new ApplicationModule(this))
-//                .netModule(new NetModule(this))
                 .build();
         applicationComponent.inject(this);
 
@@ -32,11 +34,4 @@ public class MyApplication extends Application {
         return applicationComponent;
     }
 
-//    public NetComponent getNetComponent() {
-//        return netComponent;
-//    }
-
-//    public void setNetComponent(NetComponent netComponent) {
-//        this.netComponent = netComponent;
-//    }
 }

@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Dagger2.iml" filepath="$PROJECT_DIR$/Dagger2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dagger2Netmodule/netmodule.iml" filepath="$PROJECT_DIR$/dagger2Netmodule/netmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dagger2Netmodule/dagger2Netmodule.iml" filepath="$PROJECT_DIR$/dagger2Netmodule/dagger2Netmodule.iml" />
+      <module fileurl="file://E:\Android-64\Code\Dagger2\Dagger2\dagger2Netmodule\netmodule.iml" filepath="E:\Android-64\Code\Dagger2\Dagger2\dagger2Netmodule\netmodule.iml" />
     </modules>
   </component>
 </project>

@@ -16,7 +16,8 @@ import dagger.Provides;
 
 @Module
 /**
- * modules like network module, data base module
+ * this module is for application scope related stuff
+ * modules may be like network module, data base module
  */
 public class ApplicationModule {
     private final MyApplication dagger2Application;
@@ -32,11 +33,4 @@ public class ApplicationModule {
         return dagger2Application;
     }
 
-    // providing singlton instance
-    @Singleton
-    @Provides
-    public VolleyClient provideVolleyClient() {
-        VolleyClient mInstance = new VolleyClient(dagger2Application);
-        return mInstance;
-    }
 }

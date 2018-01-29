@@ -1,5 +1,6 @@
 package com.android.dagger2.di;
 
+import com.android.dagger2.MainActivity;
 import com.android.dagger2.MyApplication;
 
 import javax.inject.Singleton;
@@ -17,7 +18,10 @@ import dagger.Component;
  */
 public interface ApplicationComponent {
 
-    public void inject(MyApplication dragger2Application);
+    void inject(MyApplication dragger2Application);
+
+    //inject activity
+    void inject(MainActivity mainActivity);
 
     // get application component
     MyApplication application();

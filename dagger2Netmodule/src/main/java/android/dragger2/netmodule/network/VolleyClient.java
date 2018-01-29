@@ -42,13 +42,6 @@ public class VolleyClient {
                 });
     }
 
-    /*public static synchronized VolleyClient getInstance(Context context) {
-        if (mInstance == null) {
-            mInstance = new VolleyClient(context);
-        }
-        return mInstance;
-    }*/
-
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             // getApplicationContext() is key, it keeps you from leaking the
