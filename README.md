@@ -23,5 +23,12 @@ This application contains two modules
 1. app - basic setup of dagger2
 2. dagger2Netmodule - shows how to setup basic network request API
 
+UI-
+
+![device-2018-01-29-191217](https://user-images.githubusercontent.com/28217318/35513431-00e9198a-0529-11e8-9366-639f9923283a.png)
+
+![device-2018-01-29-191428](https://user-images.githubusercontent.com/28217318/35513432-0118462e-0529-11e8-8f3e-7143362b444f.png)
+
+
 
 
