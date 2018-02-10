@@ -23,18 +23,13 @@ Dependency injection – https://en.wikipedia.org/wiki/Dependency_injection
 ·         # copied from developer’s android -
 o   Dagger's static, compile-time implementation means that it can be used in Android apps without needless runtime cost or memory usage.
 
-This application contains two modules
+This application contains three modules
 1. app - basic setup of dagger2
 2. dagger2Netmodule - shows how to setup basic network request API
+3. Dagger2 Android MVP -
 
-# UI-
+# Dagger2 Android MVP - UI-
 
-![device-2018-01-29-191217](https://user-images.githubusercontent.com/28217318/35513431-00e9198a-0529-11e8-9366-639f9923283a.png)
+![device-2018-02-10-113822](https://user-images.githubusercontent.com/28217318/36059111-1c0ca574-0e57-11e8-95e0-e335e5e7ee7c.png)
 
-![device-2018-01-29-191428](https://user-images.githubusercontent.com/28217318/35513432-0118462e-0529-11e8-8f3e-7143362b444f.png)
-
-
-
-
-
-
+![device-2018-02-10-113833](https://user-images.githubusercontent.com/28217318/36059110-1bd95534-0e57-11e8-81ae-2517385e615f.png)
