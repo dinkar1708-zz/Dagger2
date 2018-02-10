@@ -1,0 +1,32 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="70dp"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/fetchProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetch User Profile" />
+
+    <TextView
+        android:id="@+id/fetchProfileTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="No profile"
+        app:layout_constraintTop_toBottomOf="@id/fetchProfile" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="dagger.android.mvp.mainscreen.MainActivityFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout="@layout/fragment_main" />
+
+</android.support.constraint.ConstraintLayout>

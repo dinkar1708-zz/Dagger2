@@ -1,1 +1,1 @@
-include ':app', ':dagger2Netmodule'
+include ':app', ':dagger2Netmodule', ':dagger2-android-mvp'
